@@ -19,7 +19,7 @@ client.connect((err) => {
     if (err) {
       return console.error("error running query", err);
     }
-    console.log("Found "+ result.rows.length+);
+    console.log("Found "+ result.rows.length+" results");
     for (x in result.rows){ //output: 1
         console.log("-"+(x+1+)+":"+result.rows[x].first_name+" "+result.rows[x].last_name+", born "+(result.rows[x].birthdate.getDay())+"-"+(result.rows[x].birthdate.getMonth()+1)+"-"+(1900+result.rows[x].birthdate.getYear()) );
     }

@@ -7,6 +7,8 @@ exports.up = function(knex, Promise) {
       table.string('description');
       table.date('date_achieved');
       table.increments('id');
+      table.integer('famous_people_id');
+      table.foreign('famous_people_id').references('famous_people.id');
       //table.timestamps();
     }).then(function(){
     //knex.select().from('famous_people').then(function(result){
